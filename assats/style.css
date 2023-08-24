@@ -1,0 +1,558 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+/* Functions first */
+@import "../node_modules/bootstrap/scss/functions";
+
+
+
+/* Required Bootstrap imports */
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+/* Optional components */
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*4background: #6b6060; */
+        background: radial-gradient(circle, rgb(237, 110, 110), rgb(73, 91, 234));
+  }
+  
+  section .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: #017143; */
+     /* Linear Gradient 1  */
+    /* background: linear-gradient(to left, rgb(0, 0, 0), rgb(159, 14, 255), blue); */
+    /* Radial Gradient 2 */
+   background: radial-gradient(circle, rgb(237, 110, 110), rgb(173, 91, 234));
+   /* Gradient with Color Stops 2  */
+    /* background: linear-gradient(to bottom, rgb(255, 140, 0), rgb(200, 199, 198) 50%, rgb(0, 255, 106)); */
+
+ /* Gradient with Multiple Color Stops */
+/* background: linear-gradient(to right, red, orange 25%, rgb(234, 152, 0) 50%, green 75%, blue); */
+
+
+    clip-path: circle(70% at right -25%);
+  }
+  
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 3px;
+  }
+  
+  header .logo {
+    position: relative;
+    max-width: 270px;
+    right: 35px;
+  }
+  /* .logosur{
+    position: relative;
+    max-width: 170px;
+  } */
+  
+  header .navigation {
+    position: relative;
+    display: flex;
+  }
+  
+  header .navigation li {
+    list-style: none;
+  }
+  
+  header .navigation li a {
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+  }
+  
+  .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .content .textBox {
+    position: relative;
+    max-width: 600px;
+    margin-right: 20px;
+  }
+  
+  .content .textBox h2 {
+    color: #ffffff;
+    font-size: 2.7em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    font-weight: 700;
+  }
+  
+  .content .textBox p {
+    color: #fbfbfb;
+  }
+  
+  .content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    /*background: #017143;*/
+    background: radial-gradient(circle, rgb(200, 90, 255), rgb(5, 5, 5));
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+  
+  .social {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social li {
+    list-style: none;
+  }
+  
+  .social li a {
+    display: inline-block;
+    margin-left: 15px;
+    /*background: #222;*/
+    background: radial-gradient(circle, rgb(171, 2, 255), rgb(2, 23, 255));
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .social li a:hover {
+    background: #017143;
+    transform: translateY(-10px);
+  }
+  
+  .social li a img {
+    filter: invert(1);
+    transform: scale(0.5);
+  }
+  
+  /**********SLIDER*********/
+  
+  .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 0px;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 280px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .content .imgBox {
+    width: 500px;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+  
+  .content .imgBox img {
+    max-width: 200px;
+    margin: auto;
+    padding: 20px 20px;
+  }
+  
+  .swiper-slide img {
+    position: absolute;
+    bottom: 0;
+    max-height: 100%;
+  }
+  
+  
+  /* ......................scrollbar css........................ */
+  
+  html::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.433);
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  html::-webkit-scrollbar {
+    width: 10px;
+    background-color: #0000;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.567);
+    background-color: #ffffff;
+  }
+  
+  @media (max-width:991px) {
+    header {
+      padding: 40px;
+    }
+  
+    section {
+      padding: 150px 40px;
+    }
+  
+    .social {
+      left: 40px;
+    }
+  
+    .content {
+      flex-direction: column;
+    }
+  
+    .content .textBox,
+    .content .imgBox {
+      max-width: 100%;
+    }
+  
+    .swiper-slide {
+      height: 300px;
+    }
+  
+    header .navigation {
+      display: none;
+    }
+  
+    header .navigation.active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #017143;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+  
+    header .navigation li a {
+      margin: 10px 0;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+  
+    .toggle {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      background-size: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+      z-index: 10000;
+    }
+  
+    .toggle .active {
+      position: fixed;
+      right: 40px;
+      background-size: 25px;
+      background-repeat: no-repeat;
+      background-position: center;
+}
+  }
+   /*------------------------------------------------------------------------------- About Section--------------------------------------- */
+
+/* Add more styles for other elements on the About page if needed */
+/* Reset. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Panels. */
+.splitview {
+  position: relative;
+  width: 100%;
+  min-height: 45vw;
+  overflow: hidden;
+}
+
+.panel {
+  position: absolute;
+  width: 100vw;
+  min-height: 45vw;
+  overflow: hidden;
+}
+
+  .panel .content {
+      position: absolute;
+      width: 100vw;
+      min-height: 45vw;
+      color: #FFF;
+  }
+
+  .panel .description {
+      width: 25%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+  }
+
+  .panel img {
+      box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+      width: 35%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+
+.bottom {
+  background-color: rgb(44, 44, 44);
+  z-index: 1;
+}
+
+  .bottom .description {
+      right: 5%;
+  }
+
+.top {
+  background-color: rgb(77, 69, 173);
+  z-index: 2;
+  width: 50vw;
+
+  /*-webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+  clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);*/
+}
+
+  .top .description {
+      left: 5%;
+  }
+
+/* Handle. */
+.handle {
+  height: 100%;
+  position: absolute;
+  display: block;
+  background-color: rgb(253, 171, 0);
+  width: 5px;
+  top: 0;
+  left: 50%;
+  z-index: 3;
+}
+
+/* Skewed. */
+.skewed .handle {
+  top: 50%;
+  transform: rotate(30deg) translateY(-50%);
+  height: 200%;
+  -webkit-transform-origin: top;
+  -moz-transform-origin: top;
+  transform-origin: top;
+}
+
+.skewed .top {
+  transform: skew(-30deg);
+  margin-left: -1000px;
+  width: calc(50vw + 1000px);
+}
+
+.skewed .top .content {
+  transform: skew(30deg);
+  margin-left: 1000px;
+}
+
+/* Responsive. */
+@media (max-width: 900px) {
+  body {
+      font-size: 75%;
+  }
+}
+/* ... (your existing styles) ... */
+
+    /* .card-section {
+      background-color: #f4f4f4;
+      padding: 40px 0;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px;
+      width: calc(33.33% - 40px);
+      text-align: center;
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin-top: 10px;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      margin-top: 10px;
+      color: #777;
+    } */
+    /* ... (previous CSS code) ... */
+/* ... (previous CSS code) ... */
+
+.card-section {
+  background-color: #f0f0f0;
+  padding: 30px 0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ... (remaining CSS code) ... */
+
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card p {
+  color: #888;
+}
+
+.card audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+/* Previous Styles */
+
+/* ... (previous styles) ... */
+
+/* New Section Styles */
+
+.card-section {
+  background-color: #f0f0f0;
+  padding: 30px 0;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  flex: 1 1 calc(33.33% - 40px); /* Adjust for the number of cards per row */
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card p {
+  color: #888;
+}
+
+.card audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 40px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    flex: 1 1 calc(100% - 40px);
+  }
+}

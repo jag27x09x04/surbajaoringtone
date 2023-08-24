@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surbajao Landing Page</title>
+   <!-- Favicon -->
+   <link href="img/favicon.ico" rel="icon">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assats\style.css">
+</head>
+
+<body>
+  <style>
+    h2 span {
+      font-family: Georgia, serif;
+    }
+  </style>
+  <section>
+    <div class="circle"></div>
+    <header>
+      <a href="#" class="logosur"><img src="img/logosur copy.png" class="logo" alt="logo" /></a>
+      <div class="toggle" onclick="toggleMenu()"></div>
+      <ul class="navigation">
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"> indian singer  </a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textBox">
+        <h2>"<span> Website Under Construction "</h2>
+        <p>Experience Something New!</span></p>
+
+        <a href="#">Trending</a>
+        <a href="#">Bhajan</a>
+        <a href="#">Sad Lofi</a><br>
+        <a href="#">Romantic</a>
+        <a href="#">Sad Lofi</a><br>
+        <a href="#">Jubin Nautiyal</a>
+      </div>
+
+      <!-- Swiper -->
+      <div class="imgBox">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/jubin_img copy.png"></div>
+            <div class="swiper-slide"><img src="img/udit narayan copy.png"></div>
+            <div class="swiper-slide"><img src="img/alka yagnik copy.png"></div>
+            <div class="swiper-slide"><img src="img/kumar sanu copy.png"></div>
+            <div class="swiper-slide"><img src="img/Tony Kakkar copy.png"></div>
+            <div class="swiper-slide"><img src="img/shreya ghoshal copy.png"></div>
+            <div class="swiper-slide"><img src="img/arijeet_sing copy.png"></div>
+            <div class="swiper-slide"><img src="img/tulshi kumar copy.png"></div>
+            <div class="swiper-slide"><img src="img/Stebin Ben copy.png"></div>
+            <div class="swiper-slide"><img src="img/drashan copy.png"></div>
+            <div class="swiper-slide"><img src="img/MAN_sur copy.png"></div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <ul class="social">
+      <li>
+        <a href="#"><img
+            src="https://img.icons8.com/ios-filled/50/000000/facebook-f.png" alt="facebook" /></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/jageep-kumar-1872a721b"><img src="https:/img.icons8.com/ios-filled/50/000000/linkedin"
+            alt="linkedin" /></a>
+      </li>
+      <li>
+        <a href="#"><img
+            src="https://img.icons8.com/ios/50/000000/instagram-new--v1.png" alt="instagram" /></a>
+      </li>
+    </ul>
+
+    
+  </section>
+ 
+  </div>
+      
+ 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 200,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      loop: true,
+    });
+
+
+    function toggleMenu() {
+      const menuToggle = document.querySelector('.toggle');
+      const navigation = document.querySelector('.navigation')
+      menuToggle.classList.toggle('active')
+      navigation.classList.toggle('active')
+    }
+  </script>
+<!--************************************************************ home end ****************************************** -->
+ 
+
+
+
+<!-- LOGO SLIDER  -->
+<div class="splitview skewed">
+  <div class="panel bottom">
+      <div class="content">
+          <div class="description">
+              <!-- <h1> SURBAJAO</h1>
+              <p> Download your ringtone.</p> -->
+          </div>
+
+          <img src="img/dp.png" alt="Jagdeep">
+      </div>
+  </div>
+
+  <div class="panel top">
+      <div class="content">
+          <div class="description">
+              <!-- <h1>SURBAJAO</h1>
+              <p> Download your ringtone </p> -->
+          </div>
+
+          <img src="img/logosur copy.png" alt="Surbajao">
+      </div>
+  </div>
+
+  <div class="handle"></div>
+</div>
+<script>document.addEventListener('DOMContentLoaded', function() {
+  var parent = document.querySelector('.splitview'),
+      topPanel = parent.querySelector('.top'),
+      handle = parent.querySelector('.handle'),
+      skewHack = 0,
+      delta = 0;
+
+  // If the parent has .skewed class, set the skewHack var.
+  if (parent.className.indexOf('skewed') != -1) {
+      skewHack = 1000;
+  }
+
+  parent.addEventListener('mousemove', function(event) {
+      // Get the delta between the mouse position and center point.
+      delta = (event.clientX - window.innerWidth / 2) * 0.5;
+
+      // Move the handle.
+      handle.style.left = event.clientX + delta + 'px';
+
+      // Adjust the top panel width.
+      topPanel.style.width = event.clientX + skewHack + delta + 'px';
+  });
+});</script>
+
+<!-- New Section with Multiple Cards -->
+<!-- <section class="card-section">
+ <div class="card-container">
+    
+    <div class="card">
+      <img src="img/artist1.jpg" alt="Artist 1">
+      <h3>Artist 1</h3>
+      <p>Description of Artist 1.</p>
+    </div>
+    <div class="card">
+      <img src="img/artist2.jpg" alt="Artist 2">
+      <h3>Artist 2</h3>
+      <p>Description of Artist 2.</p>
+    </div>
+    <div class="card">
+      <img src="img/artist3.jpg" alt="Artist 3">
+      <h3>Artist 3</h3>
+      <p>Description of Artist 3.</p>
+    </div>
+    <div class="card">
+      <img src="img/artist1.jpg" alt="Artist 1">
+      <h3>Artist 1</h3>
+      <p>Description of Artist 1.</p>
+    </div>
+    <div class="card">
+      <img src="img/artist2.jpg" alt="Artist 2">
+      <h3>Artist 2</h3>
+      <p>Description of Artist 2.</p>
+    </div>
+    <div class="card">
+      <img src="img/artist3.jpg" alt="Artist 3">
+      <h3>Artist 3</h3>
+      <p>Description of Artist 3.</p>
+    </div><div class="card">
+      <img src="img/artist1.jpg" alt="Artist 1">
+      <h3>Artist 1</h3>
+      <p>Description of Artist 1.</p>
+    </div>
+    <div class="card">
+      <img src="img/artist2.jpg" alt="Artist 2">
+      <h3>Artist 2</h3>
+      <p>Description of Artist 2.</p>
+    </div>
+    <div class="card">
+      <img src="img/artist3.jpg" alt="Artist 3">
+      <h3>Artist 3</h3>
+      <p>Description of Artist 3.</p>
+    </div>
+  </div>
+</section> -->
+ <!-- ... (previous HTML code) ... -->
+<!-- audio sectio started  -->
+<section class="card-section">
+  <div class="card-container">
+    <div class="card">
+      <img src="img/artist1.jpg" alt="Artist 1">
+      <h3>Artist 1</h3>
+      <p>Description of Artist 1.</p>
+      <audio controls>
+        <source src="path/to/artist1-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="card">
+      <img src="img/artist2.jpg" alt="Artist 2">
+      <h3>Artist 2</h3>
+      <p>Description of Artist 2.</p>
+      <audio controls>
+        <source src="path/to/artist2-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="card">
+      <img src="img/artist1.jpg" alt="Artist 1">
+      <h3>Artist 1</h3>
+      <p>Description of Artist 1.</p>
+      <audio controls>
+        <source src="path/to/artist1-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="card">
+      <img src="img/artist2.jpg" alt="Artist 2">
+      <h3>Artist 2</h3>
+      <p>Description of Artist 2.</p>
+      <audio controls>
+        <source src="path/to/artist2-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="card">
+      <img src="img/artist1.jpg" alt="Artist 1">
+      <h3>Artist 1</h3>
+      <p>Description of Artist 1.</p>
+      <audio controls>
+        <source src="path/to/artist1-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="card">
+      <img src="img/artist2.jpg" alt="Artist 2">
+      <h3>Artist 2</h3>
+      <p>Description of Artist 2.</p>
+      <audio controls>
+        <source src="path/to/artist2-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div><div class="card">
+      <img src="img/artist1.jpg" alt="Artist 1">
+      <h3>Artist 1</h3>
+      <p>Description of Artist 1.</p>
+      <audio controls>
+        <source src="path/to/artist1-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="card">
+      <img src="img/artist2.jpg" alt="Artist 2">
+      <h3>Artist 2</h3>
+      <p>Description of Artist 2.</p>
+      <audio controls>
+        <source src="path/to/artist2-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div><div class="card">
+      <img src="img/artist1.jpg" alt="Artist 1">
+      <h3>Artist 1</h3>
+      <p>Description of Artist 1.</p>
+      <audio controls>
+        <source src="path/to/artist1-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="card">
+      <img src="img/artist2.jpg" alt="Artist 2">
+      <h3>Artist 2</h3>
+      <p>Description of Artist 2.</p>
+      <audio controls>
+        <source src="path/to/artist2-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div><div class="card">
+      <img src="img/artist1.jpg" alt="Artist 1">
+      <h3>Artist 1</h3>
+      <p>Description of Artist 1.</p>
+      <audio controls>
+        <source src="path/to/artist1-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="card">
+      <img src="img/artist2.jpg" alt="Artist 2">
+      <h3>Artist 2</h3>
+      <p>Description of Artist 2.</p>
+      <audio controls>
+        <source src="path/to/artist2-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div><div class="card">
+      <img src="img/artist1.jpg" alt="Artist 1">
+      <h3>Artist 1</h3>
+      <p>Description of Artist 1.</p>
+      <audio controls>
+        <source src="path/to/artist1-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="card">
+      <img src="img/artist2.jpg" alt="Artist 2">
+      <h3>Artist 2</h3>
+      <p>Description of Artist 2.</p>
+      <audio controls>
+        <source src="path/to/artist2-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div><div class="card">
+      <img src="img/artist1.jpg" alt="Artist 1">
+      <h3>Artist 1</h3>
+      <p>Description of Artist 1.</p>
+      <audio controls>
+        <source src="path/to/artist1-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="card">
+      <img src="img/artist2.jpg" alt="Artist 2">
+      <h3>Artist 2</h3>
+      <p>Description of Artist 2.</p>
+      <audio controls>
+        <source src="path/to/artist2-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div><div class="card">
+      <img src="img/artist1.jpg" alt="Artist 1">
+      <h3>Artist 1</h3>
+      <p>Description of Artist 1.</p>
+      <audio controls>
+        <source src="path/to/artist1-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="card">
+      <img src="img/artist2.jpg" alt="Artist 2">
+      <h3>Artist 2</h3>
+      <p>Description of Artist 2.</p>
+      <audio controls>
+        <source src="path/to/artist2-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div><div class="card">
+      <img src="img/artist1.jpg" alt="Artist 1">
+      <h3>Artist 1</h3>
+      <p>Description of Artist 1.</p>
+      <audio controls>
+        <source src="path/to/artist1-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="card">
+      <img src="img/artist2.jpg" alt="Artist 2">
+      <h3>Artist 2</h3>
+      <p>Description of Artist 2.</p>
+      <audio controls>
+        <source src="path/to/artist2-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="card">
+      <img src="img/artist1.jpg" alt="Artist 1">
+      <h3>Artist 1</h3>
+      <p>Description of Artist 1.</p>
+      <audio controls>
+        <source src="path/to/artist1-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="card">
+       
+      <h3>All Rights Reserved.</h3>
+      <p><a href="https://jag27x09x04.github.io/Jagdeep/">jag....</a></p>
+     
+    </div>
+   
+    <!-- ... (more cards) ... -->
+  </div>
+ 
+
+<!-- ...  audio sectio... -->
+<!-- footer -->
+ 
+
+ 
+</body>
+
+</html>
